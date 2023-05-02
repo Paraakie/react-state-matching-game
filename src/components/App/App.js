@@ -18,6 +18,15 @@ class App extends Component{
     }
   }
 
+  handleTileClicked = (id, color) => {
+    this.setState((state) => {
+      const titles = state.titles;
+      let toBeCleared = state.toBeCleared;
+      
+      return { toBeCleared, titles }
+    })
+  }
+  
   startGame = (numTiles) => {
     this.setState((state) => ({
       playing: true,
@@ -27,14 +36,6 @@ class App extends Component{
     }))
   }
 
-  handleTileClicked = (id, color) => {
-      this.setState((state) => {
-        const titles = state.titles;
-        let toBeCleared = state.toBeCleared;
-        
-        return { toBeCleared, titles }
-      })
-  }
 
   render() {
   return (
