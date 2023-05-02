@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import OptionsPanel from '../OptionsPanel'
 import Board from '../Board'
-import { createTiles, indexOfSelected } from '../../misc/utils'
+import { createTiles } from '../../misc/utils'
 
 import './App.css';
 
@@ -10,23 +10,21 @@ class App extends Component{
     super(props)
 
     this.state = {
-      tiles: [],
       numTiles: 36,
       playing: false,
-      previousTile: null,
+      previousTileIndex: null,
+      tiles: [],
+      toBeCleared: null
     }
-
   }
 
   startGame = (numTiles) => {
-
-    this.setState({
+    this.setState((state) => ({
       playing: true,
+      previousTileIndex: null,
       toBeCleared: null,
-      previousTile: null,
-      tiles: createTiles(this.state.numTiles, this.handleTileClicked)
-    })
-
+      tiles: createTiles(state.numTiles)
+    }))
   }
 
   handleNumTileChange  = (num) => {
