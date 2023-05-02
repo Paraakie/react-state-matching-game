@@ -27,6 +27,10 @@ class App extends Component{
     }))
   }
 
+  handleTileClicked = (id, color) => {
+
+  }
+
   render() {
   return (
     <div className="App">
