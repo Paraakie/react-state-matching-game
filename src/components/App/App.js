@@ -20,10 +20,10 @@ class App extends Component{
 
   handleTileClicked = (id, color) => {
     this.setState((state) => {
-      const titles = state.titles;
-      let toBeCleared = state.toBeCleared;
+      const tiles = state.tiles
+      let toBeCleared = state.toBeCleared
       
-      return { toBeCleared, titles }
+      return {toBeCleared, tiles}
     })
   }
   
