@@ -4,12 +4,12 @@ import Button from '../Button'
 import TileSelector from '../TileSelector'
 
 const OptionsPanel = (props) => (
-  <div className='StartScreen'>
-    <TileSelector numTiles={props.numTiles} handleNumTileChange={props.handleNumTileChange}/>
-    <Button startGame={props.startGame} playing={props.playing} />
+  <div>
+    <TileSelector numTiles={props.numTiles} />
+    <Button playing={props.playing} startGame={props.startGame} />
   </div>
 )
-
-
+  
+  
 
 export default OptionsPanel
