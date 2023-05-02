@@ -32,8 +32,8 @@ class App extends Component{
         const titles = state.titles;
         let toBeCleared = state.toBeCleared;
         
-        return { toBeCleared, titles };
-      });
+        return { toBeCleared, titles }
+      })
   }
 
   render() {
