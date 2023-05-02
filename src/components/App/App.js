@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import OptionsPanel from '../OptionsPanel'
 import Board from '../Board'
-import { createTiles } from '../../misc/utils'
+import { createTiles, indexOfSelected } from '../../misc/utils'
 
 import './App.css';
 
@@ -52,16 +52,15 @@ class App extends Component{
       return {toBeCleared, tiles, previousTileIndex}
     })
   }
-  
+
   startGame = (numTiles) => {
     this.setState((state) => ({
       playing: true,
       previousTileIndex: null,
       toBeCleared: null,
-      tiles: createTiles(state.numTiles)
+      tiles: createTiles(state.numTiles, this.handleTileClicked)
     }))
   }
-
 
   render() {
   return (
