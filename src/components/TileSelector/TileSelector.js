@@ -4,7 +4,8 @@ import './TileSelector.css'
 
 const TileSelector = (props) => {
 
-  const [ref, hovered] = useHover())
+  const [ref, hovered] = useHover()
+
 
   const dropdown = hovered ? (
         <div className='tileSelectorContent' >
