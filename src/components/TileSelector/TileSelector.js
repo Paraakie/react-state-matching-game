@@ -1,8 +1,11 @@
 import React from 'react'
 import './TileSelector.css'
+import useHover from '../../hooks'
 
 const TileSelector = (props) => {
 
+  const ref = useHover.ref
+  const hovered = useHover.hovered
 
   const dropdown = (
         <div className='tileSelectorContent' >
